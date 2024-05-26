@@ -29,5 +29,5 @@ Aby uruchomić aplikację, niezbędne jest zainstalowanie środowiska Node.js or
 Pobierz i zainstaluj Node.js ze strony [nodejs.org]
 
 ### Krok 2: Instalacja pakietów
-Skopiuj repozytorium na swoj komputer wpisujac komende (w terminal bash): "git clone https://github.com/......../przepisy.git -Nastepnie wpisz w terminalu "cd przepisy" -Zainstaluj potrzebne paczki wpisujac "npm install" -Uruchom aplikacje wpisaujac "node app.js" -Po wpisaniu komendy powinnno wypisac "Server is running on 3000", po tym nalezy w przegladarce
+Skopiuj repozytorium na swoj komputer wpisujac komende (w terminal bash): "git clone https://github.com/......../przepisy.git -Nastepnie wpisz w terminalu "cd przepisy" -Zainstaluj potrzebne paczki wpisujac "npm install" -Uruchom aplikacje wpisaujac "node app.js" -Po wpisaniu komendy powinnno wypisac "Server is running on port 3000", po tym nalezy w przegladarce
 wpisac adres "http://localhost:3000".
