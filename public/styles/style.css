@@ -1,0 +1,122 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+header, footer {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1, footer p {
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e07b00;
+}
+
+input[type="text"], input[type="number"], textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, textarea:focus {
+    background-color: #f0f0f0;
+    outline: none;
+    border-color: #ff8c00;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.center-link {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    background-color: #ff8c00;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.center-link:hover {
+    background-color: #e07b00;
+}
+
+.comment, .rating {
+    background: #f9f9f9;
+    padding: 10px;
+    margin-top: 10px;
+    border-left: 5px solid #ff8c00;
+    border-radius: 5px;
+}

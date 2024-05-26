@@ -1,0 +1,54 @@
+<%- include('../shared/header', { title: 'Lista Przepisów' }) %>
+
+<div class="container">
+    <h2>Lista Przepisów</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nazwa</th>
+                <th>Składniki</th>
+                <th>Instrukcja</th>
+                <th>Komentarze</th>
+                <th>Ocena</th>
+                <th>Akcje</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% recipes.forEach(recipe => { %>
+                <tr>
+                    <td><strong><%= recipe.name %></strong></td>
+                    <td><%= recipe.ingredients.join(', ') %></td>
+                    <td><%= recipe.instructions %></td>
+                    <td>
+                        <% recipe.comments.forEach(comment => { %>
+                            <div class="comment"><%= comment.text %></div>
+                        <% }); %>
+                    </td>
+                    <td>
+                        <% if (recipe.ratings.length > 0) { %>
+                            <%= (recipe.ratings.reduce((total, rating) => total + rating.score, 0) / recipe.ratings.length).toFixed(1) %> / 5
+                        <% } else { %>
+                            Brak ocen
+                        <% } %>
+                    </td>
+                    <td>
+                        <form action="/add-rating" method="post">
+                            <label for="score">Ocena:</label>
+                            <input type="hidden" name="recipeId" value="<%= recipe.id %>">
+                            <input type="number" name="score" min="1" max="5" required>
+                            <button type="submit">Dodaj ocenę</button>
+                        </form>
+                        <form action="/add-comment" method="post">
+                            <input type="hidden" name="recipeId" value="<%= recipe.id %>">
+                            <input type="text" name="text" placeholder="Dodaj komentarz" required>
+                            <button type="submit">Dodaj komentarz</button>
+                        </form>
+                        <a href="/edit/<%= recipe.id %>">Edytuj</a> |
+                        <a href="/delete/<%= recipe.id %>" onclick="return confirm('Czy na pewno chcesz usunąć ten przepis?');">Usuń</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <a href="/add" class="center-link">Dodaj nowy przepis</a>
+</div>
