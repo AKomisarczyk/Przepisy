@@ -8,6 +8,7 @@
                 <th>Nazwa</th>
                 <th>Składniki</th>
                 <th>Instrukcja</th>
+                <th>Czas przygotowania</th>
                 <th>Komentarze</th>
                 <th>Ocena</th>
                 <th>Akcje</th>
@@ -19,6 +20,7 @@
                     <td><strong><%= recipe.name %></strong></td>
                     <td><%= recipe.ingredients.join(', ') %></td>
                     <td><%= recipe.instructions %></td>
+                    <td><%= recipe.prepTime %> minut</td>
                     <td>
                         <% recipe.comments.forEach(comment => { %>
                             <div class="comment"><%= comment.text %></div>
